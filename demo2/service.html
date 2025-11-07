@@ -223,8 +223,7 @@
                  data-tns-center="false"
                  data-tns-dots="false"
                  data-tns-prev-button="#kt_card_slider_prev"
-                 data-tns-next-button="#kt_card_slider_next">
-                <!-- Slides will be added by JS -->
+                 data-tns-next-button="#kt_card_slider_next"> 
             </div>
 
             <div class="d-flex justify-content-center mt-3">
@@ -237,13 +236,10 @@
             </div>
         </div>
     </div>
-</div>
-
-<!-- Tiny Slider JS -->
+</div> 
 <script src="path-to-tiny-slider/min/tiny-slider.js"></script>
 
-<script>
-    // Replace your offers.json content here
+<script> 
     const offers = [
         { "id": 1, "image": "assets/media/ch/Image_fx - 2025-10-07T192931.327.webp" },
         { "id": 2, "image": "assets/media/ch/Image_fx - 2025-10-07T192931.327.webp" },
@@ -657,8 +653,7 @@ const categories = [
 
 const foodSlider = document.getElementById("food-slider");
 const tabsContainer = document.getElementById("categories-tabs");
-
-// Render categories
+ 
 categories.forEach((categorie, index) => {
     const catDiv = document.createElement("div");
     catDiv.className = "text-center px-2 py-2";
@@ -671,8 +666,7 @@ categories.forEach((categorie, index) => {
         </a>
     `;
     foodSlider.appendChild(catDiv);
-
-    // Render products tab
+ 
     const tabDiv = document.createElement("div");
     tabDiv.className = `tab-pane fade ${index===0?'show active':''}`;
     tabDiv.id = `kt_stats_widget_2_tab_${categorie.id}`;
@@ -701,13 +695,10 @@ categories.forEach((categorie, index) => {
                     </div>
                 </div>
             </div>`;
-
-        // Add click event to navigate to product details page
+ 
         const card = prodDiv.querySelector('.card');
-      card.addEventListener('click', () => {
-    // Save product in localStorage
-    localStorage.setItem('selectedProduct', JSON.stringify(produit));
-        // Go to details page
+      card.addEventListener('click', () => { 
+    localStorage.setItem('selectedProduct', JSON.stringify(produit)); 
         window.location.href = 'product.html';
     });
 
